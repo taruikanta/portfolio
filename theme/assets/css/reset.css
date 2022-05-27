@@ -1,7 +1,6 @@
-/*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/*! destyle.css v2.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 
 /* Reset box-model and set borders */
-
 /* ============================================ */
 
 *,
@@ -13,7 +12,6 @@
 }
 
 /* Document */
-
 /* ============================================ */
 
 /**
@@ -24,12 +22,11 @@
 
 html {
   line-height: 1.15; /* 1 */
-  text-size-adjust: 100%; /* 2 */
-  -webkit-tap-highlight-color: transparent; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
 }
 
 /* Sections */
-
 /* ============================================ */
 
 /**
@@ -49,7 +46,6 @@ main {
 }
 
 /* Vertical rhythm */
-
 /* ============================================ */
 
 p,
@@ -65,7 +61,6 @@ dl {
 }
 
 /* Headings */
-
 /* ============================================ */
 
 h1,
@@ -74,24 +69,23 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
   font-size: inherit;
+  line-height: inherit;
   font-weight: inherit;
+  margin: 0;
 }
 
 /* Lists (enumeration) */
-
 /* ============================================ */
 
 ul,
 ol {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 /* Lists (definition) */
-
 /* ============================================ */
 
 dt {
@@ -103,7 +97,6 @@ dd {
 }
 
 /* Grouping content */
-
 /* ============================================ */
 
 /**
@@ -114,11 +107,11 @@ dd {
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
-  margin: 0;
   overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
   clear: both;
   color: inherit;
-  border-top-width: 1px;
 }
 
 /**
@@ -127,7 +120,7 @@ hr {
  */
 
 pre {
-  font-family: monospace; /* 1 */
+  font-family: monospace, monospace; /* 1 */
   font-size: inherit; /* 2 */
 }
 
@@ -136,7 +129,6 @@ address {
 }
 
 /* Text-level semantics */
-
 /* ============================================ */
 
 /**
@@ -144,9 +136,9 @@ address {
  */
 
 a {
-  color: inherit;
-  text-decoration: none;
   background-color: transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 /**
@@ -155,6 +147,7 @@ a {
  */
 
 abbr[title] {
+  text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
 }
 
@@ -175,7 +168,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace; /* 1 */
+  font-family: monospace, monospace; /* 1 */
   font-size: inherit; /* 2 */
 }
 
@@ -194,9 +187,9 @@ small {
 
 sub,
 sup {
-  position: relative;
   font-size: 75%;
   line-height: 0;
+  position: relative;
   vertical-align: baseline;
 }
 
@@ -208,15 +201,13 @@ sup {
   top: -0.5em;
 }
 
-/* Replaced content */
-
+/* Embedded content */
 /* ============================================ */
 
 /**
  * Prevent vertical alignment issues.
  */
 
-svg,
 img,
 embed,
 object,
@@ -225,13 +216,10 @@ iframe {
 }
 
 /* Forms */
-
 /* ============================================ */
 
 /**
- * Reset form fields to make them styleable.
- * 1. Make form elements stylable across systems iOS especially.
- * 2. Inherit text-transform from parent.
+ * Reset form fields to make them styleable
  */
 
 button,
@@ -239,58 +227,104 @@ input,
 optgroup,
 select,
 textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
   padding: 0;
   margin: 0;
-  font: inherit;
-  color: inherit;
-  text-align: inherit;
-  text-transform: inherit; /* 2 */
-  vertical-align: middle;
-  background: transparent;
+  outline: 0;
   border-radius: 0;
-  appearance: none; /* 1 */
+  text-align: inherit;
 }
 
 /**
  * Reset radio and checkbox appearance to preserve their look in iOS.
  */
 
-[type='checkbox'] {
+[type="checkbox"] {
+  -webkit-appearance: checkbox;
   appearance: checkbox;
 }
 
-[type='radio'] {
+[type="radio"] {
+  -webkit-appearance: radio;
   appearance: radio;
 }
 
 /**
- * Correct cursors for clickable elements.
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
  */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  cursor: pointer;
+input {
+  /* 1 */
+  overflow: visible;
 }
 
-button:disabled,
-[type='button']:disabled,
-[type='reset']:disabled,
-[type='submit']:disabled {
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button[disabled],
+[type="button"][disabled],
+[type="reset"][disabled],
+[type="submit"][disabled] {
   cursor: default;
 }
 
 /**
- * Improve outlines for Firefox and unify style with input elements & buttons.
+ * Remove the inner border and padding in Firefox.
  */
 
-:-moz-focusring {
-  outline: auto;
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
 }
 
-select:disabled {
-  opacity: inherit;
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Remove arrow in IE10 & IE11
+ */
+
+select::-ms-expand {
+  display: none;
 }
 
 /**
@@ -306,13 +340,24 @@ option {
  */
 
 fieldset {
-  min-width: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  min-width: 0;
 }
 
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
 legend {
-  padding: 0;
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -335,8 +380,8 @@ textarea {
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -344,7 +389,7 @@ textarea {
  * 1. Correct the outline style in Safari.
  */
 
-[type='search'] {
+[type="search"] {
   outline-offset: -2px; /* 1 */
 }
 
@@ -352,17 +397,17 @@ textarea {
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type='search']::-webkit-search-decoration {
-  appearance: none;
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Fix font inheritance.
+ * 2. Change font properties to `inherit` in Safari.
  */
 
 ::-webkit-file-upload-button {
-  appearance: button; /* 1 */
+  -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
 
@@ -375,7 +420,6 @@ label[for] {
 }
 
 /* Interactive */
-
 /* ============================================ */
 
 /*
@@ -398,21 +442,16 @@ summary {
  * Remove outline for editable content.
  */
 
-[contenteditable]:focus {
-  outline: auto;
+[contenteditable] {
+  outline: none;
 }
 
-/* Tables */
-
+/* Table */
 /* ============================================ */
-
-/**
-1. Correct table border color inheritance in all Chrome and Safari.
-*/
 
 table {
   border-collapse: collapse;
-  border-color: inherit; /* 1 */
+  border-spacing: 0;
 }
 
 caption {
@@ -421,11 +460,30 @@ caption {
 
 td,
 th {
-  padding: 0;
   vertical-align: top;
+  padding: 0;
 }
 
 th {
-  font-weight: bold;
   text-align: left;
+  font-weight: bold;
+}
+
+/* Misc */
+/* ============================================ */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
 }
