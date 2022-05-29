@@ -159,18 +159,9 @@ img {
   line-height: 30px;
 }
 
-.index .about .content .introduction-image {
+.about .content .introduction-image {
   min-width: 400px;
   height: 300px;
-}
-
-.about .content .introduction-image {
-  max-width: 500px;
-}
-
-.about .contact {
-  max-width: 500px;
-  margin-inline: auto;
 }
 
 .works .work-item {
@@ -317,15 +308,6 @@ img {
 
 .single .text-wrap p {
   line-height: 3;
-}
-
-.about .contents-wrap {
-  padding-block-start: 50px;
-  padding-block-end: 300px;
-}
-
-.about .contents-wrap .content {
-  margin-block-start: 70px;
 }
 
 .contact-form {
@@ -561,16 +543,6 @@ img {
 @media not all and (max-width: 768px) {
   .sp-visible {
     display: none;
-  }
-
-  .index .about .contents-wrap .content {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 30px;
-  }
-
-  .index .about .content .introduction-text {
-    max-width: 700px;
   }
 
   .about .contents-wrap .content {

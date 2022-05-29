@@ -8,6 +8,8 @@ $(function () {
   const $open = $navigation.find(".js-visible");
   const $logo = $headerWrap.find(".logo");
   const $blank = $(".is-blank");
+  const $works = $("#js-works");
+  const $about = $("#js-about");
 
   function slider() {
     const $area = $(".slider-area");
@@ -42,6 +44,11 @@ $(function () {
     startTimer();
   }
 
+  function closeMenu() {
+    hamburger();
+    fade();
+}
+
   function hamburger() {
     $body.toggleClass("is-fixed");
     $border.toggleClass("is-active");
@@ -49,9 +56,11 @@ $(function () {
     $headerWrap.toggleClass("is-active");
     $blank.toggleClass("is-blank");
     $navList.stop().fadeToggle(500);
+    $works.on("click", closeMenu);
+    $about.on("click", closeMenu);
   }
 
-  function fadeIn() {
+  function fade() {
     $logo.toggleClass("is-invisible");
     $navigation.toggleClass("is-open");
   }
@@ -62,7 +71,7 @@ $(function () {
 
   function setEvent() {
     hamburger();
-    fadeIn();
+    fade();
   }
 
   function init() {
