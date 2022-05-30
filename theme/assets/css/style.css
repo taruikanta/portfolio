@@ -91,6 +91,14 @@ img {
   position: relative;
 }
 
+.button:hover{
+  color: #a3b5cd;
+}
+
+.button:hover .text {
+  color: #a3b5cd;
+}
+
 .button::before {
   content: "";
   position: absolute;
@@ -101,15 +109,13 @@ img {
   width: 0;
   background: #fff;
   transition: all 0.2s;
-}
-
-.button:hover .text {
   color: #a3b5cd;
 }
 
 .button:hover::before {
   width: 100%;
   transition-delay: 0.2s;
+  color: #a3b5cd;
 }
 
 .first-view .slider-area {
@@ -310,35 +316,35 @@ img {
   line-height: 3;
 }
 
-.contact-form {
+.mw_wp_form_input .contact-form {
   padding-block-end: 70px;
 }
 
-.contact-form .title {
+.mw_wp_form_input .contact-form .title {
   text-align: center;
 }
 
-.contact-form .contents-wrap {
+.mw_wp_form_input .contact-form .contents-wrap {
   padding-block-start: 150px;
   max-width: 500px;
   margin-inline: auto;
 }
 
-.contact-form .contact-list {
+.mw_wp_form_input .contact-form .contact-list {
   margin-block-start: 30px;
 }
 
-.contact-form .contact-item + .contact-item {
+.mw_wp_form_input .contact-form .contact-item + .contact-item {
   margin-block-start: 30px;
 }
 
-.contact-form .input-wrap {
+.mw_wp_form_input .contact-form .input-wrap {
   height: 50px;
   background-color: #fff;
   margin-block-start: 10px;
 }
 
-.contact-form .text-area {
+.mw_wp_form_input .contact-form .text-area {
   background-color: #fff;
   margin-block-start: 10px;
   height: 400px;
@@ -347,55 +353,59 @@ img {
   padding: 16px;
 }
 
-.contact-form .input-wrap .text-input {
+.mw_wp_form_input .contact-form .input-wrap .text-input {
   padding: 16px;
   width: 100%;
   color: #666;
 }
 
-.contact-form .button-wrap {
+.mw_wp_form_input .contact-form .button-wrap {
   margin-block-start: 100px;
   width: 125px;
   margin-inline: auto;
 }
 
-.contact-confirm {
+.mw_wp_form_input .is-visible{
+  display: none;
+}
+
+.mw_wp_form_confirm .container{
   padding-block-end: 70px;
 }
 
-.contact-confirm .title {
+.mw_wp_form_confirm .title {
   text-align: center;
 }
 
-.contact-confirm .contents-wrap {
+.mw_wp_form_confirm .contents-wrap {
   padding-block-start: 150px;
   max-width: 500px;
   margin-inline: auto;
 }
 
-.contact-confirm .contact-list {
+.mw_wp_form_confirm .contact-list {
   margin-block-start: 30px;
 }
 
-.contact-confirm .text-input {
+.mw_wp_form_confirm .text-input {
   width: 100%;
   padding: 16px;
 }
 
-.contact-confirm .text-area {
+.mw_wp_form_confirm .text-area {
   width: 100%;
   padding: 16px;
 }
 
-.contact-confirm .contact-item + .contact-item {
+.mw_wp_form_confirm .contact-item + .contact-item {
   margin-block-start: 30px;
 }
 
-.contact-confirm .contact-item {
+.mw_wp_form_confirm .contact-item {
   border-bottom: 2px #fff solid;
 }
 
-.contact-confirm.text-area {
+.mw_wp_form_confirm .text-area {
   margin-block-start: 10px;
   height: 400px;
   max-width: 100%;
@@ -403,32 +413,31 @@ img {
   padding: 16px;
 }
 
-.contact-confirm .button-wrap {
+.mw_wp_form_confirm .button-wrap {
   margin-block-start: 100px;
   display: flex;
   justify-content: space-between;
 }
 
-.contact-confirm .button {
+.mw_wp_form_confirm .button {
   max-width: 125px;
 }
 
-.contact-complete .contents-wrap {
+.mw_wp_form_complete {
   padding-block-start: 150px;
-  margin-inline: auto;
-}
-
-.contact-complete .contents-wrap .title {
+  font-size: 32px;
+  letter-spacing: 6px;
   text-align: center;
 }
 
-.contact-complete .thanks-wrap {
+.mw_wp_form_send .thanks {
   text-align: center;
   margin-block-start: 120px;
 }
 
-.contact-complete .thanks {
-  font-size: 32px;
+.mw_wp_form_send_error {
+  padding-block-start: 150px;
+  text-align: center;
   letter-spacing: 6px;
 }
 
@@ -558,6 +567,14 @@ img {
   .works .title {
     text-align: end;
   }
+
+  .mw_wp_form_complete{
+    font-size: 32px;
+  }
+
+  .mw_wp_form_send_error{
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -592,5 +609,13 @@ img {
   }
   .single .contents-wrap .title {
     text-align: center;
+  }
+
+  .mw_wp_form_complete{
+    font-size: 26px;
+  }
+
+  .mw_wp_form_send_error{
+    font-size: 26px;
   }
 }
