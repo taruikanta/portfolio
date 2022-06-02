@@ -452,15 +452,6 @@ img {
     min-width: 470px;
   }
 
-  .works .work-list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .work-list .work-item {
-    max-width: 250px;
-  }
-
   .single .thumbnail {
     max-width: 600px;
     max-height: 600px;
@@ -542,7 +533,21 @@ img {
   .container {
     margin-inline: 10px;
   }
+}
 
+@media not all and (max-width: 1050px){
+  .works .work-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .work-list .work-item {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 1050px){
   .works .work-list .work-item + .work-item {
     margin-block-start: 30px;
   }
