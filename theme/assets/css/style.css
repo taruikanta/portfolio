@@ -36,7 +36,6 @@ img {
 }
 
 .header-wrap .logo {
-  font-size: 40px;
   letter-spacing: 6px;
   color: #f2c166;
 }
@@ -550,6 +549,10 @@ img {
 }
 
 @media not all and (max-width: 768px) {
+.header-wrap .logo{
+  font-size: 40px;
+}
+
   .sp-visible {
     display: none;
   }
@@ -582,6 +585,10 @@ img {
     justify-content: end;
     margin-inline: 10px;
   }
+
+.header-wrap .logo{
+  font-size: 30px;
+}
 
   .header .is-active {
     justify-content: space-between;
