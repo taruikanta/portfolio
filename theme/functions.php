@@ -4,7 +4,7 @@ function my_setup(){
   wp_enqueue_style('reset',get_template_directory_uri().'/assets/css/reset.css',);
   wp_enqueue_style('top-style',get_template_directory_uri().'/assets/css/style.css',);
   wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), '1.12.4');
-  wp_enqueue_script( 'top-js', get_template_directory_uri().'/assets/js/index.js');
+  wp_enqueue_script( 'top-js',get_template_directory_uri().'/assets/js/index.js');
 }
 
 function get_subloop($num){
