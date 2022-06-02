@@ -28,7 +28,7 @@ $(function () {
     }
 
     function startTimer() {
-      timer = setInterval(nextSlide, $duration);
+      setInterval(nextSlide, $duration);
     }
 
     function nextSlide() {

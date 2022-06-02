@@ -1,4 +1,4 @@
-<footer class="footer">
+    <footer class="footer">
       <div class="footer-wrap">
         <p class="text">© 2022 kanta tarui.</p>
       </div>

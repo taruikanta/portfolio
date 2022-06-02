@@ -4,10 +4,10 @@ html {
 }
 
 body {
-  background-color: #a3b5cd;
+  height: 100%;
   font-size: 16px;
   color: #fff;
-  height: 100%;
+  background-color: #a3b5cd;
 }
 
 .is-fixed {
@@ -27,17 +27,17 @@ img {
 }
 
 .header-wrap {
-  max-width: 1300px;
-  height: 100px;
-  margin-inline: auto;
-  padding-block-start: 50px;
   display: flex;
   justify-content: space-between;
+  max-width: 1300px;
+  height: 100px;
+  padding-block-start: 50px;
+  margin-inline: auto;
 }
 
 .header-wrap .logo {
-  letter-spacing: 6px;
   color: #f2c166;
+  letter-spacing: 6px;
 }
 
 .header-wrap .navigation {
@@ -79,18 +79,18 @@ img {
 }
 
 .button {
-  height: 100%;
+  position: relative;
   width: 100%;
+  height: 100%;
   height: 40px;
-  border: 4px #fff solid;
-  border-radius: 15px;
-  text-align: center;
   margin-inline: auto;
   overflow: hidden;
-  position: relative;
+  text-align: center;
+  border: 4px #fff solid;
+  border-radius: 15px;
 }
 
-.button:hover{
+.button:hover {
   color: #a3b5cd;
 }
 
@@ -99,29 +99,29 @@ img {
 }
 
 .button::before {
-  content: "";
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
   z-index: -1;
-  height: 100%;
   width: 0;
+  height: 100%;
+  color: #a3b5cd;
+  content: '';
   background: #fff;
   transition: all 0.2s;
-  color: #a3b5cd;
 }
 
 .button:hover::before {
   width: 100%;
-  transition-delay: 0.2s;
   color: #a3b5cd;
+  transition-delay: 0.2s;
 }
 
 .first-view .slider-area {
-  margin-inline: auto;
+  position: relative;
   max-width: 400px;
   height: 400px;
-  position: relative;
+  margin-inline: auto;
   overflow: hidden;
 }
 
@@ -132,17 +132,17 @@ img {
 }
 
 .first-view .slider-area .slider-item {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .first-view .title {
+  margin-block-start: 130px;
   font-size: 32px;
   text-align: center;
-  margin-block-start: 130px;
   letter-spacing: 6px;
 }
 
@@ -174,28 +174,28 @@ img {
 }
 
 .works .work-item .fade-wrap {
-  opacity: 0;
   position: absolute;
   top: 10px;
+  right: 10px;
   bottom: 10px;
   left: 10px;
-  right: 10px;
+  opacity: 0;
 }
 
 .work-item .fade-wrap .text {
-  color: #a3b5cd;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100%;
+  color: #a3b5cd;
 }
 
 .works .work-item .fade-wrap:hover {
-  background-color: rgba(255, 255, 255, 1);
   width: 90%;
   height: 90%;
-  opacity: 1;
   font-size: 24px;
+  background-color: rgb(255 255 255 / 100%);
+  opacity: 1;
   transition: all 0.4s ease-in-out;
 }
 
@@ -208,14 +208,14 @@ img {
 }
 
 .contact .title {
-  text-align: center;
   height: 30px;
+  text-align: center;
 }
 
 .contact .description {
-  letter-spacing: 6px;
-  text-align: center;
   margin-block-start: 60px;
+  text-align: center;
+  letter-spacing: 6px;
 }
 
 .contact .button-wrap {
@@ -232,14 +232,14 @@ img {
   display: flex;
   justify-content: space-between;
   width: 200px;
-  margin-inline: auto;
   margin-block-start: 30px;
+  margin-inline: auto;
 }
 
 .contact .sns-wrap .twitter {
   width: 50px;
   height: 50px;
-  background-image: url(../img/iconmonstr-twitter-4.svg);
+  background-image: url('../img/iconmonstr-twitter-4.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -248,7 +248,7 @@ img {
 .contact .sns-wrap .instagram {
   width: 50px;
   height: 50px;
-  background-image: url(../img/iconmonstr-instagram-14.svg);
+  background-image: url('../img/iconmonstr-instagram-14.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -260,12 +260,12 @@ img {
 }
 
 .footer .footer-wrap {
-  height: 60px;
-  background-color: #f2c166;
-  font-size: 16px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 16px;
+  background-color: #f2c166;
 }
 
 .top {
@@ -306,79 +306,79 @@ img {
 }
 
 .single .text-wrap {
+  max-width: 1200px;
   margin-block-start: 100px;
   margin-inline: auto;
-  max-width: 1200px;
 }
 
 .single .text-wrap p {
   line-height: 3;
 }
 
-.mw_wp_form_input .contact-form {
+.mw_wp_form_input .container {
   padding-block-end: 70px;
 }
 
-.mw_wp_form_input .contact-form .title {
+.mw_wp_form_input .container .title {
   text-align: center;
 }
 
-.mw_wp_form_input .contact-form .contents-wrap {
-  padding-block-start: 150px;
+.mw_wp_form_input .container .contents-wrap {
   max-width: 500px;
+  padding-block-start: 150px;
   margin-inline: auto;
 }
 
-.mw_wp_form_input .contact-form .contact-list {
+.mw_wp_form_input .container.contact-list {
   margin-block-start: 30px;
 }
 
-.mw_wp_form_input .contact-form .contact-item + .contact-item {
+.mw_wp_form_input .container .contact-item + .contact-item {
   margin-block-start: 30px;
 }
 
-.mw_wp_form_input .contact-form .input-wrap {
+.mw_wp_form_input .container .input-wrap {
   height: 50px;
-  background-color: #fff;
   margin-block-start: 10px;
+  background-color: #fff;
 }
 
-.mw_wp_form_input .contact-form .text-area {
-  background-color: #fff;
-  margin-block-start: 10px;
+.mw_wp_form_input .container .text-area {
+  width: 100%;
   height: 400px;
-  width: 100%;
-  color: #666;
   padding: 16px;
+  margin-block-start: 10px;
+  color: #666;
+  background-color: #fff;
 }
 
-.mw_wp_form_input .contact-form .input-wrap .text-input {
-  padding: 16px;
+.mw_wp_form_input .container .input-wrap .text-input {
   width: 100%;
+  padding: 16px;
   color: #666;
 }
 
-.mw_wp_form_input .contact-form .button-wrap {
-  margin-block-start: 100px;
+.mw_wp_form_input .container .button-wrap {
   width: 125px;
+  margin-block-start: 100px;
   margin-inline: auto;
 }
 
-.mw_wp_form_input .is-visible{
+.mw_wp_form_input .is-visible {
   display: none;
 }
 
-.mw_wp_form_confirm .container{
+.mw_wp_form_confirm .container {
   padding-block-end: 70px;
 }
 
-.mw_wp_form_confirm .title {
+.mw_wp_form_confirm .container .title {
   text-align: center;
 }
 
-.mw_wp_form_confirm .contents-wrap {
-  padding-block-start: 150px;
+.mw_wp_form_confirm .container .contents-wrap {
   max-width: 500px;
+  padding-block-start: 150px;
   margin-inline: auto;
 }
 
@@ -391,47 +391,47 @@ img {
   padding: 16px;
 }
 
-.mw_wp_form_confirm .text-area {
+.mw_wp_form_confirm .container .text-area {
   width: 100%;
   padding: 16px;
 }
 
-.mw_wp_form_confirm .contact-item + .contact-item {
+.mw_wp_form_confirm .container .contact-item + .contact-item {
   margin-block-start: 30px;
 }
 
-.mw_wp_form_confirm .contact-item {
+.mw_wp_form_confirm .container .contact-item {
   border-bottom: 2px #fff solid;
 }
 
 .mw_wp_form_confirm .text-area {
-  margin-block-start: 10px;
-  height: 400px;
   max-width: 100%;
-  color: #666;
+  height: 400px;
   padding: 16px;
+  margin-block-start: 10px;
+  color: #666;
 }
 
-.mw_wp_form_confirm .button-wrap {
-  margin-block-start: 100px;
+.mw_wp_form_confirm .container .button-wrap {
   display: flex;
   justify-content: space-between;
+  margin-block-start: 100px;
 }
 
-.mw_wp_form_confirm .button {
+.mw_wp_form_confirm .container .button {
   max-width: 125px;
 }
 
 .mw_wp_form_complete {
   padding-block-start: 150px;
   font-size: 32px;
-  letter-spacing: 6px;
   text-align: center;
+  letter-spacing: 6px;
 }
 
 .mw_wp_form_send .thanks {
-  text-align: center;
   margin-block-start: 120px;
+  text-align: center;
 }
 
 .mw_wp_form_send_error {
@@ -447,8 +447,8 @@ img {
 
   .header-wrap .navigation .nav-list {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     min-width: 470px;
   }
 
@@ -462,13 +462,13 @@ img {
 @media screen and (max-width: 1300px) {
   .header-wrap .is-active {
     z-index: 997;
-    color: #a3b5cd;
-    text-align: center;
-    line-height: 1.6;
-    transition: all 0.5s;
     display: block;
     justify-content: space-between;
     margin-inline: 10px;
+    line-height: 1.6;
+    color: #a3b5cd;
+    text-align: center;
+    transition: all 0.5s;
   }
 
   .header-wrap {
@@ -477,10 +477,10 @@ img {
   }
 
   .header-wrap .nav-list {
-    display: none;
     position: fixed;
     top: 50%;
     right: 10%;
+    display: none;
     font-size: 24px;
     letter-spacing: 6px;
   }
@@ -490,25 +490,25 @@ img {
   }
 
   .header-wrap .navigation {
-    height: 100%;
-    width: 100%;
-    z-index: 996;
     position: fixed;
-    background-color: #fff;
-    color: #f2c166;
     top: 0;
     left: -100%;
+    z-index: 996;
+    width: 100%;
+    height: 100%;
+    color: #f2c166;
+    background-color: #fff;
   }
 
   .header-wrap .is-open {
-    left: 0px;
     position: fixed;
+    left: 0;
   }
 
   .header .header-wrap .nav-toggle {
+    z-index: 996;
     display: block;
     align-self: center;
-    z-index: 996;
   }
 
   .header-wrap .nav-toggle .nav-border {
@@ -535,11 +535,11 @@ img {
   }
 }
 
-@media not all and (max-width: 1050px){
+@media not all and (max-width: 1050px) {
   .works .work-list {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   .work-list .work-item {
@@ -547,16 +547,16 @@ img {
   }
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1050px) {
   .works .work-list .work-item + .work-item {
     margin-block-start: 30px;
   }
 }
 
 @media not all and (max-width: 768px) {
-.header-wrap .logo{
-  font-size: 40px;
-}
+  .header-wrap .logo {
+    font-size: 40px;
+  }
 
   .sp-visible {
     display: none;
@@ -564,8 +564,8 @@ img {
 
   .about .contents-wrap .content {
     display: flex;
-    justify-content: space-between;
     column-gap: 30px;
+    justify-content: space-between;
   }
 
   .about .content .introduction-text {
@@ -576,11 +576,11 @@ img {
     text-align: end;
   }
 
-  .mw_wp_form_complete{
+  .mw_wp_form_complete {
     font-size: 32px;
   }
 
-  .mw_wp_form_send_error{
+  .mw_wp_form_send_error {
     font-size: 32px;
   }
 }
@@ -591,9 +591,9 @@ img {
     margin-inline: 10px;
   }
 
-.header-wrap .logo{
-  font-size: 30px;
-}
+  .header-wrap .logo {
+    font-size: 30px;
+  }
 
   .header .is-active {
     justify-content: space-between;
@@ -611,23 +611,21 @@ img {
     text-align: center;
   }
 
-  .index .about .content .introduction-image {
+  .about .content .introduction-image {
     display: none;
+    margin-block-start: 30px;
+    margin-inline: auto;
   }
 
-  .about .content .introduction-image {
-    margin-inline: auto;
-    margin-block-start: 30px;
-  }
   .single .contents-wrap .title {
     text-align: center;
   }
 
-  .mw_wp_form_complete{
+  .mw_wp_form_complete {
     font-size: 26px;
   }
 
-  .mw_wp_form_send_error{
+  .mw_wp_form_send_error {
     font-size: 26px;
   }
 }
